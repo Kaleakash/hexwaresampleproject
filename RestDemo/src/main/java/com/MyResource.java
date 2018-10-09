@@ -121,11 +121,39 @@ public class MyResource {
 	}
   }
 
-@POST
-   @Path("readJson") 
-   @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML}) 
+   @PUT
+   @Path("putJson") 
+   @Produces(MediaType.APPLICATION_JSON) 
    @Consumes(MediaType.APPLICATION_JSON) 
-   public Emp getEmpJsonAndXml(Emp emp) {
+   public Emp putEmpJson(Emp emp) {
+   emp.setSalary(emp.getSalary()+500);
    return emp;
-  }    
+  }
+
+  @DELETE
+   @Path("deleteJson/{id}") 
+   @Produces(MediaType.TEXT_PLAIN)
+    public String deleteEmp(@PathParam("id") int id) {
+      Emp e1 = new Emp();e1.setId(101);e1.setName("Raj");e1.setSalary(12000);
+      Emp e2 = new Emp();e2.setId(102);e2.setName("Raju");e2.setSalary(14000);
+     Emp e3= new Emp();e3.setId(103);e3.setName("Ravi");e3.setSalary(16000);
+     Emp e4 = new Emp();e4.setId(104);e4.setName("Ram");e4.setSalary(18000);
+    ArrayList<Emp> al =new ArrayList<Emp>();
+   al.add(e1);al.add(e2);al.add(e3);al.add(e4);
+	int flag=0;
+  	Iterator<Emp> ii = al.iterator();
+	while(ii.hasNext()){
+		Emp emp = ii.next();
+		if(emp.getId()==id) {
+			al.remove(emp);
+			flag=1;
+		}
+	}
+ 	if(flag>0) {
+		return "Record deleted successfully";
+	}else {
+		return "Record is not present";
+	}	  
+ 
+   }    
 }
