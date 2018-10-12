@@ -86,9 +86,9 @@ public class MyResource {
   }
 
 @GET
-   @Path("getEmployees") 
+   @Path("getEmps") 
    @Produces(MediaType.APPLICATION_JSON)  
-   public List<Emp> getEmployees() {
+   public List<Emp> getEmps() {
       Emp e1 = new Emp();e1.setId(101);e1.setName("Raj");e1.setSalary(12000);
       Emp e2 = new Emp();e2.setId(102);e2.setName("Raju");e2.setSalary(14000);
      Emp e3= new Emp();e3.setId(103);e3.setName("Ravi");e3.setSalary(16000);
@@ -112,13 +112,10 @@ public class MyResource {
   
   @POST
    @Path("postData") 
-      @Produces(MediaType.TEXT_PLAIN)    
-   public String postDataVerify(@QueryParam("name") String name, @QueryParam("pass") String pass) {
-      	if(name.equals("Raj") && pass.equals("123")) {
-		return "Successfully Login";
-	}else {
-		return "Failure try once again";
-	}
+    @Produces({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML}) 
+  @Consumes({MediaType.APPLICATION_JSON,MediaType.APPLICATION_XML})
+   public Emp postDataVerify(Emp emp) {
+      	return emp;
   }
 
    @PUT
@@ -145,7 +142,7 @@ public class MyResource {
 	while(ii.hasNext()){
 		Emp emp = ii.next();
 		if(emp.getId()==id) {
-			al.remove(emp);
+			ii.remove();
 			flag=1;
 		}
 	}
@@ -155,5 +152,5 @@ public class MyResource {
 		return "Record is not present";
 	}	  
  
-   }    
+   }   
 }
