@@ -1,0 +1,35 @@
+<div>
+  <h1>Welcome to {{title}}!</h1>
+</div>
+<h2>Employee Information!- Static Data</h2>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td id="firstName">Raj</td>
+    <td>12000</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Seeta</td>
+    <td>14000</td>
+  </tr>
+</table>
+<h2>Employee Information! - Rest Service Data</h2>
+<table border="1">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Salary</th>
+  </tr>
+<tr *ngFor="let emp of restEmployees">
+      <td>{{emp.id}}</td>
+      <td>{{emp.name}}</td>
+      <td>{{emp.salary  }}</td>
+</tr>
+</table>
+<router-outlet></router-outlet>
