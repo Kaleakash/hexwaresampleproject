@@ -12,6 +12,7 @@ export class AppComponent {
   name:string="Raj Deep";
   employees:Employee[];
   restEmployees:Employee[];
+  res:string;
   constructor(private employeeService:EmployeeService){
     this.employees=[
       new Employee(1,"Raj",12000),
@@ -23,4 +24,7 @@ export class AppComponent {
     this.employeeService.getEmployeeInfo().subscribe(data=>this.restEmployees=data);
   }
 
+  storeEmployeeInfo():void {
+    this.employeeService.storeEmployeeInOf().subscribe(data=>this.res=data);
+  }
 }

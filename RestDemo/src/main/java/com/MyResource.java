@@ -52,6 +52,17 @@ public class MyResource {
     public String displayFullName(@PathParam("fname") String fname, @PathParam("lname") String lname) {
         return "Welcome "+fname +", "+lname;
     }
+
+@POST
+    @Path("pathParamPost/{fname}/{lname}")
+    @Produces(MediaType.TEXT_PLAIN)
+    public String postPathParam(@PathParam("fname") String fname, @PathParam("lname") String lname) {
+      	System.out.println("Post method");
+	System.out.println("Name is "+fname);
+	System.out.println("LName is "+lname);
+	  return "Welcome "+fname +", "+lname;
+    }
+
    @GET
    @Path("empPlain") 
    @Produces(MediaType.TEXT_PLAIN)  

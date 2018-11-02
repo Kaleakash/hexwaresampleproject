@@ -9,4 +9,9 @@ export class EmployeeService {
     getEmployeeInfo():Observable<Employee[]>{
         return this.httpClient.get<Employee[]>("http://localhost:9191/Rest/webapi/obj/getEmps");
     }
+
+    storeEmployeeInOf():Observable<string>{
+        return this.httpClient.post("http://localhost:9191/Rest/webapi/obj/pathParamPost/Akash/Kale",{},{responseType:"text"});
+    }
+
 }
