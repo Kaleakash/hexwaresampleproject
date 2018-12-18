@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Employee.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>JMockitWithJDBI\src\main\java\com\model\Employee.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package com.model;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import org.skife.jdbi.v2.DBI;
+import java.util.*;</div><span>import ...</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>4</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>public class Employee {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>5</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private int <span class='instance covered' title='Reads: 9 Writes: 4'>id</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>6</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private String <span class='instance covered' title='Reads: 7 Writes: 4'>name</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>7</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private float <span class='instance covered' title='Reads: 7 Writes: 4'>salary</span>;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>8</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l8s0'>	public Employee(){</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 18</li>
+        </ol>
+      </td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>10</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l10s0'>	}</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 18</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l11s0'>	public Employee(int id, String name, float salary){</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 127x2</li>
+          <li>com.util.EmployeeTest#testProperty: 27</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l12s0'>		this.id = id;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 127x2</li>
+          <li>com.util.EmployeeTest#testProperty: 27</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>13</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l13s0'>		this.name = name;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 127x2</li>
+          <li>com.util.EmployeeTest#testProperty: 27</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>14</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l14s0'>		this.salary = salary;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 127x2</li>
+          <li>com.util.EmployeeTest#testProperty: 27</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l15s0'>	}</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 127x2</li>
+          <li>com.util.EmployeeTest#testProperty: 27</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setId(int id) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l17s0'>		this.id = id;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 19</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l18s0'>	}</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 19</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setName(String name) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l20s0'>		this.name = name;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 20</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l21s0'>	}</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 20</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public void setSalary(float salary) {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>23</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l23s0'>		this.salary = salary;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 21</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>24</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l24s0'>	}</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 21</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public int getId() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>26</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l26s0'>		return id;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 147</li>
+          <li>com.util.EmployeeTest#testProperty: 22, 28</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String getName() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l29s0'>		return name;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 148</li>
+          <li>com.util.EmployeeTest#testProperty: 23, 29</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public float getSalary() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td class='count'>3</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l32s0'>		return salary;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 149</li>
+          <li>com.util.EmployeeTest#testProperty: 24, 30</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>33</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public boolean equals(Object obj){</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>3</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#7f8000' onclick='hidePath()'>Path coverage: 3/6</span>
+        <span class='covered' onclick="showPath(this,'l37s0 l38s0')">A: 1</span>
+        <span class='uncovered' onclick="showPath(this,'l37s0 l40s0 l41s0')">B: 0</span>
+        <span class='covered' onclick="showPath(this,'l37s0 l40s0 l43s0 l44s0 l44s1 l44s2 l45s0')">C: 1</span>
+        <span class='covered' onclick="showPath(this,'l37s0 l40s0 l43s0 l44s0 l47s0')">D: 1</span>
+        <span class='uncovered' onclick="showPath(this,'l37s0 l40s0 l43s0 l44s0 l44s1 l47s0')">E: 0</span>
+        <span class='uncovered' onclick="showPath(this,'l37s0 l40s0 l43s0 l44s0 l44s1 l44s2 l47s0')">F: 0</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td class='count'>3</td>
+      <td><pre class='prettyprint jmp'>		<span id='l37s0' title='Executions: 3' class='covered cp' onclick='showHide(this,0)'>if(obj==null)</span>{</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 33, 34, 35</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l38s0'>			return false;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 33</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>		<span id='l40s0' title='Executions: 2' class='covered cp' onclick='showHide(this,0)'>if(getClass()!=obj.getClass())</span>{</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 34, 35</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>41</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l41s0'>			return false;</pre>
+        <ol style='display:none'></ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>43</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l43s0'>		Employee emp = (Employee)obj;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 34, 35</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>44</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>		<span id='l44s0' title='Executions: 2' class='covered cp' onclick='showHide(this,0)'>if(Objects.equals(this.id,emp.id)</span> && <span id='l44s1' title='Executions: 1' class='covered cp' onclick='showHide(this,1)'>Objects.equals(this.name,this.name)</span> && <span id='l44s2' title='Executions: 0' class='uncovered'>Objects.equals(this.salary,emp.salary))</span>{</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 34, 35</li>
+        </ol>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 34</li>
+        </ol>
+        <ol style='display:none'></ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l45s0'>			return true;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 34</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l47s0'>			return false;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 35</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>48</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public int hashCode() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l52s0'>		return Objects.hash(id,name,salary);</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testProperty: 38x2</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>53</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	@Override</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public String toString() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l56s0'>	return "Id is "+id+" Name is "+name+" Salary is "+salary; </pre>
+        <ol style='display:none'></ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}	</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>62</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

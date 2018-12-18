@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EmployeeFactory.java</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <link rel='stylesheet' type='text/css' href='../../coverage.css'/>
+  <link rel='shortcut icon' type='image/png' href='../../logo.png'/>
+  <script type='text/javascript' src='../../coverage.js'></script>
+  <script type='text/javascript' src='../../prettify.js'></script>
+</head>
+<body onload='prettyPrint()'>
+  <table cellpadding='0' cellspacing='1'>
+    <caption>JMockitWithJDBI\src\main\java\com\factory\EmployeeFactory.java</caption>
+    <tr>
+      <td class='line'>1</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>package com.factory;</pre></td>
+    </tr>
+    <tr>
+      <td class='line'></td><td>&nbsp;</td>
+      <td><pre class='imports prettyprint' onclick='showHideLines(this)'><div>import com.persistence.EmployeeDao;
+import com.model.Employee;
+import com.persistence.DbConnection;
+import java.util.*;</div><span>import ...</span></pre></td>
+    </tr>
+    <tr>
+      <td class='line'>6</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l6s0'>public class EmployeeFactory {</pre>
+        <ol style='display:none'></ol>
+      </td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>8</td><td>&nbsp;</td>
+      <td><pre class='comment'>	//Database Connection </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>9</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	private static EmployeeDao dao() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>10</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l10s0'>    	DbConnection db = new DbConnection();</pre>
+        <ol style='display:none'></ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>11</td><td class='count'>0</td>
+      <td><pre class='prettyprint uncovered' id='l11s0'>    	return db.getConnect().onDemand(EmployeeDao.class);</pre>
+        <ol style='display:none'></ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>12</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>  	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>14</td><td>&nbsp;</td>
+      <td><pre class='comment'>	//Add Employee Records </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>15</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public static String addEmpDetails(int id,String name,float salary){</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
+        <span class='covered' onclick="showPath(this,'l16s0 l17s0 l18s0')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l16s0 l17s0 l20s0')">B: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>16</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l16s0'>		int res = dao().addEmpDao(id,name,salary);</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testAddEmpDetails: 56, 57</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>17</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>		<span id='l17s0' title='Executions: 2' class='covered cp' onclick='showHide(this,0)'>if(res>0)</span> {</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testAddEmpDetails: 56, 57</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>18</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l18s0'>			return "Successfully Inserted";</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testAddEmpDetails: 56</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>19</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>20</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l20s0'>			return "Failure try once again";</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testAddEmpDetails: 57</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>21</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>22</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>24</td><td>&nbsp;</td>
+      <td><pre class='comment'>	//Delete Employee Records </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>25</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public static String deleteEmp(int id){</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
+        <span class='covered' onclick="showPath(this,'l26s0 l27s0 l28s0')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l26s0 l27s0 l30s0')">B: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>26</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l26s0'>		int res = dao().deleteEmpDao(id); </pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDeleteEmp: 77, 78</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>27</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>		<span id='l27s0' title='Executions: 2' class='covered cp' onclick='showHide(this,0)'>if(res>0)</span> {</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDeleteEmp: 77, 78</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>28</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l28s0'>			return "Successfully Deleted";</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDeleteEmp: 77</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>29</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>30</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l30s0'>			return "There is no record with the id as "+id;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDeleteEmp: 78</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>31</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>32</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>34</td><td>&nbsp;</td>
+      <td><pre class='comment'>	//Increment Employee Salary </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>35</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public static String raiseSalary(int id,float salary){</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
+        <span class='covered' onclick="showPath(this,'l36s0 l37s0 l38s0')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l36s0 l37s0 l40s0')">B: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>36</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l36s0'>		int res = dao().incrementEmpSalary(id,salary);	</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testRaiseSalary: 98, 99</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>37</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>		<span id='l37s0' title='Executions: 2' class='covered cp' onclick='showHide(this,0)'>if(res>0)</span> {</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testRaiseSalary: 98, 99</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>38</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l38s0'>			return "Successfully Incremented";</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testRaiseSalary: 98</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>39</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>40</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l40s0'>			return "There is no record with the id as "+id;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testRaiseSalary: 99</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>41</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>42</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>44</td><td>&nbsp;</td>
+      <td><pre class='comment'>	//Increment Employee Salary </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>45</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public static String dropSalary(int id,float salary){</pre></td>
+    </tr>
+    <tr>
+      <td></td><td class='count'>2</td>
+      <td class='paths'>
+        <span style='cursor:default; background-color:#00ff00' onclick='hidePath()'>Path coverage: 2/2</span>
+        <span class='covered' onclick="showPath(this,'l46s0 l47s0 l48s0')">A: 1</span>
+        <span class='covered' onclick="showPath(this,'l46s0 l47s0 l50s0')">B: 1</span>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>46</td><td class='count'>2</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l46s0'>		int res = dao().decrementEmpSalary(id,salary);	</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDropSalary: 119, 120</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>47</td><td class='count'>2</td>
+      <td><pre class='prettyprint jmp'>		<span id='l47s0' title='Executions: 2' class='covered cp' onclick='showHide(this,0)'>if(res>0)</span> {</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDropSalary: 119, 120</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>48</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l48s0'>			return "Successfully Decremented";</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDropSalary: 119</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>49</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}else {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>50</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l50s0'>			return "There is no record with the id as "+id;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testDropSalary: 120</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>51</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>		}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>52</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	}</pre></td>
+    </tr>
+    <tr><td class='line'></td><td colspan='2'>&nbsp;</td></tr>
+    <tr>
+      <td class='line'>54</td><td>&nbsp;</td>
+      <td><pre class='comment'>	//Retrieve all Employee information  </pre></td>
+    </tr>
+    <tr>
+      <td class='line'>55</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>	public static List&lt;Employee> listAllEmp() {</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>56</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l56s0'>    	List&lt;Employee> es = dao().getAllEmployees();</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 143</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>57</td><td class='count'>1</td>
+      <td><pre class='prettyprint covered cp' onclick='showHide(this)' id='l57s0'>    	return es;</pre>
+        <ol style='display:none'>
+          <li>com.util.EmployeeTest#testListAllEmp: 143</li>
+        </ol>
+      </td>
+    </tr>
+    <tr>
+      <td class='line'>58</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>  	}</pre></td>
+    </tr>
+    <tr>
+      <td class='line'>59</td><td>&nbsp;</td>
+      <td><pre class='prettyprint'>}</pre></td>
+    </tr>
+  </table>
+</body>
+</html>

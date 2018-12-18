@@ -22,7 +22,7 @@
             <systemPropertyVariables>
               <coverage-output>html</coverage-output>
               <coverage-metrics>all</coverage-metrics>
-              <coverage-classes>com.*</coverage-classes>
+              <coverage-excludes>com.util.*</coverage-excludes>
               <coverage-check>85</coverage-check>
             </systemPropertyVariables>
           </configuration>
@@ -56,11 +56,11 @@
       <version>1.33</version>
       <scope>test</scope>
     </dependency>
-    <dependency>
-      <groupId>org.jdbi</groupId>
-      <artifactId>jdbi</artifactId>
-      <version>2.73</version>
-    </dependency>
+<dependency>
+    <groupId>org.jdbi</groupId>
+    <artifactId>jdbi</artifactId>
+    <version>2.38.1</version>
+</dependency>
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
