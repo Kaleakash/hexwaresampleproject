@@ -13,38 +13,39 @@ public class App
     	String name;
     	float salary;
     	int res;
+
    System.out.println("JDBI Application");
         DBConnection db = new DBConnection();
         EmployeeDao empDao = db.getConnection().onDemand(EmployeeDao.class);
        Scanner sc = new Scanner(System.in);
         do {
-    	   System.out.println("1:Add\t 2:Delete \t 3:Update 4:Display By Id \t 5:Display All");
+   System.out.println("1:Add\t 2:Delete \t 3:Update 4:Display By Id \t 5:Display All");
     	   System.out.println("Enter your choice");
     	   int choice = sc.nextInt();
     	   switch(choice) {
     	   case 1:  System.out.println("Enter the id");
-    	   			id = sc.nextInt();
-    	   			System.out.println("Enter the name");
-    	   			name = sc.next();
-    	   			System.out.println("Enter the salary");
-    	   			salary = sc.nextFloat();
-    	   			res = empDao.insertEmp(id,name,salary);
-    	   			if(res>0) {
-    	   				System.out.println("Record inserted successfully");
+    	   		id = sc.nextInt();
+    	   		System.out.println("Enter the name");
+    	   		name = sc.next();
+    	   		System.out.println("Enter the salary");
+    	   		salary = sc.nextFloat();
+    	   		res = empDao.insertEmp(id,name,salary);
+    	   		if(res>0) {
+    	   		System.out.println("Record inserted successfully");
     	   			}
     	   			break;
     	   case 2:System.out.println("Enter the id to delete the record");
     	           id = sc.nextInt();
     	          res= empDao.deleteEmp(id);
     	          		if(res>0) {
-    	          			System.out.println("Record deleted successfully!");
+    	          		System.out.println("Record deleted successfully!");
     	          		}else {
-    	          			System.out.println("Record is not present");
+    	          		System.out.println("Record is not present");
     	          		}
     	          	break;
     	   case 3:System.out.println("Enter the salary");
-    	   			salary = sc.nextFloat();
-    	   			System.out.println("Enter the id");
+    	   		salary = sc.nextFloat();
+    	   		System.out.println("Enter the id");
            			id = sc.nextInt();
            			res= empDao.updateEmp(id, salary);
            			if(res>0) {
@@ -57,9 +58,9 @@ public class App
     	   			id = sc.nextInt();
     	   			Employee emp = empDao.empById(id);
     	   			if(emp==null) {
-    	   				System.out.println("Record is not present");
+    	   		System.out.println("Record is not present");
     	   			}else {
-    	   				System.out.println("id is "+emp.getId()+" Name is "+emp.getName()+" Salary is "+emp.getSalary());
+    	  System.out.println("id is "+emp.getId()+" Name is "+emp.getName()+" Salary is "+emp.getSalary());
     	   			}
     		   break;
     	   case 5:List<Employee> listOfEmp = empDao.allEmployeeDetails();
