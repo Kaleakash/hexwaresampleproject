@@ -1,49 +1,49 @@
-package com;
+package com.util;
+import com.factory.EmployeeFactory;
+import com.model.Employee;
 import java.util.*;	
-public class App 
+
+public class EmployeeTest 
 {
 	static Scanner obj = new Scanner(System.in);
 	static int id;		
 	static String name;
 	static float salary;
 	public static void addEmp(int id,String name,float salary){
-		String res = Emp.addEmpDetails(id,name,salary);
+		String res = EmployeeFactory.addEmpDetails(id,name,salary);
 		System.out.println(res);
 	}
 	public static void deleteEmp(int id) {
-		String res = Emp.deleteEmp(id);
+		String res = EmployeeFactory.deleteEmp(id);
+		System.out.println(res);	
+	}
+	public static void incrementSalary(int id, float salary) {
+		String res = EmployeeFactory.raiseSalary(id,salary);
 		System.out.println(res);	
 	}		
-	public static void updateEmp(int id) {
-		String res = Emp.updateEmp(id);
+	public static void decrementSalary(int id, float salary) {
+		String res = EmployeeFactory.dropSalary(id,salary);
 		System.out.println(res);	
 	}
 	public static void displayAll() {
 	System.out.println("All Employee Information");	
-	List<Emp> listOfRec = Emp.listAllEmp();
-	Iterator<Emp> ii = listOfRec.iterator();
+	List<Employee> listOfRec = EmployeeFactory.listAllEmp();
+	Iterator<Employee> ii = listOfRec.iterator();
 		while(ii.hasNext()) {
-			Emp emp = ii.next();
+			Employee emp = ii.next();
 			System.out.println(emp);
 		}
 	}
-	public static void displayOneEmp(int id) {
-		Emp emp = Emp.displayOneEmp(id);
-		if(emp ==null) {
-			System.out.println("Record is not present");
-		}else {
-			System.out.println(emp);
-		}
-	}	
+	
     	public static void main( String[] args )
     	{
 	String con = null;
 	do{
-		System.out.println("1:Add Emp");
-		System.out.println("2:Delete Emp");
-		System.out.println("3:Update Emp");
-		System.out.println("4:Display All Emp");
-		System.out.println("5:Display Specific Emp");
+		System.out.println("1:Add Employee");
+		System.out.println("2:Delete Employee");
+		System.out.println("3:Increment Salary");
+		System.out.println("4:Decrement Salary");
+		System.out.println("5:Display All Employee Salary");
 		System.out.println("6:Exit");
 		int op = obj.nextInt();
 		switch(op) {
@@ -61,15 +61,17 @@ public class App
 			break;
 		case 3:	System.out.println("Enter the id");
 			id = obj.nextInt();
-			updateEmp(id);
+			System.out.println("Enter the salary");
+			salary = obj.nextFloat();
+			incrementSalary(id,salary);
 			break;
-		case 4:	displayAll();
-			break;
-		case 5:	System.out.println("Enter the id");
+		case 4:	System.out.println("Enter the id");
 			id = obj.nextInt();
-			displayOneEmp(id);
-			break;
-		case 6:	System.exit(0);
+			System.out.println("Enter the salary");
+			salary = obj.nextFloat();
+			decrementSalary(id,salary);
+			break;	
+		case 5:	displayAll();
 			break;
 		}
 		System.out.println("Do you want to continue....");
