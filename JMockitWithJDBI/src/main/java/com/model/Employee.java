@@ -40,7 +40,7 @@ public class Employee {
 		if(getClass()!=obj.getClass()){
 			return false;
 		}
-		Employee emp = (Employee)obj;
+	Employee emp = (Employee)obj;
 		if(Objects.equals(this.id,emp.id) && Objects.equals(this.name,this.name) && Objects.equals(this.salary,emp.salary)){
 			return true;
 		}else {

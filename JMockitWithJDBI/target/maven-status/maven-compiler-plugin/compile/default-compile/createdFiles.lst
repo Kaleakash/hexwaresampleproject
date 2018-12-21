@@ -1,5 +1,6 @@
 com\persistence\EmployeeMapper.class
 com\model\Employee.class
+com\model\Manager.class
 com\factory\EmployeeFactory.class
 com\persistence\EmployeeDao.class
 com\persistence\DbConnection.class

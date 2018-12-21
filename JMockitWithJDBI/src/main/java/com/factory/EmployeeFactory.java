@@ -13,11 +13,12 @@ public class EmployeeFactory {
 	
 	//Add Employee Records 
 	public static String addEmpDetails(int id,String name,float salary){
+		
 		int res = dao().addEmpDao(id,name,salary);
 		if(res>0) {
-			return "Successfully Inserted";
+			return "Success";
 		}else {
-			return "Failure try once again";
+			return "Failure";
 		}
 	}
 
